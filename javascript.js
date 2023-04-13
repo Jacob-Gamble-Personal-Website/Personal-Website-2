@@ -9,23 +9,3 @@ const alertMessages = {
   if (alertMessages.hasOwnProperty(currentPage)) {
     alert(alertMessages[currentPage]);
   }
-  
-  const slides = document.querySelectorAll('.slide');
-let slideIndex = 0;
-
-function showSlide(n) {
-  slides.forEach((slide) => slide.classList.remove('active'));
-  slides[n].classList.add('active');
-}
-
-function nextSlide() {
-  slideIndex++;
-  if (slideIndex > slides.length - 1) {
-    slideIndex = 0;
-  }
-  showSlide(slideIndex);
-}
-
-setInterval(() => {
-  nextSlide();
-}, 3000);
